@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Up & Down 숫자 맞추기 게임</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>🔢 Up & Down 게임</h1>
+      <div class="display-area">
+        <p id="chance">남은기회: 5</p>
+        <h2 id="result">Guess the Number!</h2>
+        <div class="image-box">
+          <img
+            src="https://d14cvuwsb9oabg.cloudfront.net/c_fill,fl_lossy,w_960/g_south_east,l_havit_watermark2,w_180,x_5,y_5/v1504169972/im23ypxu9qjp1pwjflda.jpg"
+            alt="게임 상태 이미지"
+          />
+        </div>
+      </div>
+
+      <div class="input-area">
+        <input
+          type="number"
+          id="user"
+          placeholder="1부터 100까지 숫자를 입력하세요"
+          onkeypress="if(event.keyCode == 13){ playGame() }"
+        />
+        <button id="play">GO!</button>
+      </div>
+
+      <button id="reset">RESET</button>
+    </div>
+    <img id="cursor-img" src="img/ufo.png" alt="마우스 커서 이미지" />
+
+    <script src="custom.js"></script>
+  </body>
+</html>
